@@ -1,26 +1,16 @@
-**# 🌉 Bridge Capacity Management System (BCMS)
+Repository ini dibuat dalam rangka memenuhi Tugas Besar mata kuliah Berpikir Komputasional. Kelompok kami terdiri dari
 
-Sistem simulasi berbasis *Command Line Interface* (CLI) yang memodelkan manajemen beban lalu lintas pada sebuah jembatan secara *real-time*. Proyek ini dibangun menggunakan bahasa Python sebagai pemenuhan Tugas Besar mata kuliah **Berpikir Komputasional (WI1102) Institut Teknologi Bandung**.
+Muhammad Alif Fahmi Jati (19626137)
+Muhammad Hisyam M.R. Arisyi (16526029)
+Beryl Raditya Ahmad (16526131)
+Fawwaz Muhammad Zaahiy (19626029)
+Tristan Pudyameka Sakti (19626101)
 
-## ✨ Fitur Utama
+Secara umum, program ini akan mensimulasikan manajemen kapasitas beban lalu lintas pada sebuah jembatan secara real-time. Pengguna dapat memasukkan spesifikasi jembatan (kapasitas, panjang, dan kesehatan awal), lalu sistem akan memunculkan kendaraan secara acak (motor, mobil, truk) yang melintas dari dua arah. Program ini dibangun utamanya menggunakan paradigma Object-Oriented Programming (OOP), logika Finite State Machine (FSM), perulangan while, fungsi (def), logika-dasar (if-else), serta mengimpor beberapa modul bawaan Python seperti os, time, dan random, dan memanfaatkan library rich untuk antarmuka terminal. Program ini memiliki beberapa kemampuan, diantaranya :
 
-*   **Object-Oriented Programming (OOP):** Memisahkan logika kalkulasi (*Backend*) dengan antarmuka visual (*Frontend*), serta menerapkan prinsip enkapsulasi pada *state* jembatan.
-*   **Finite State Machine (FSM):** Sistem peringatan dini dinamis yang mengubah status jembatan (NORMAL, WASPADA, KRITIS) berdasarkan ambang batas beban.
-*   **Simulasi Fisika Heuristik:** 
-    *   *Momen Lentur:* Beban kendaraan di area tengah jembatan dikalikan untuk merepresentasikan peningkatan tegangan struktural.
-    *   *Fatigue (Kelelahan Material):* Kapasitas maksimal jembatan menurun secara bertahap seiring banyaknya kendaraan yang melintas.
-*   **Palang Histeresis (Fail-Safe):** Logika preventif di mana palang hanya akan terbuka kembali jika beban turun drastis di bawah 50%, mencegah osilasi (buka-tutup berulang). Jika kesehatan struktur menyentuh 0, jembatan akan ditutup permanen.
-*   **Interactive CLI Dashboard:** Visualisasi terminal yang mulus dan berwarna berkat pustaka `rich`, lengkap dengan *progress bar* dan animasi kendaraan (10 FPS).
-
-## 🛠️ Prasyarat
-
-Sebelum menjalankan program, pastikan Anda telah menginstal:
-*   Python 3.x
-*   Pustaka `rich` (dapat diinstal melalui langkah di bawah)
-
-## 🚀 Cara Menjalankan Program
-
-1. *Clone* repositori ini ke direktori lokal:
-   ```bash
-   git clone https://github.com/username-anda/bridge-capacity-sim.git
-   cd bridge-capacity-sim**
+Mensimulasikan kedatangan kendaraan secara stokastik (acak) dengan bobot yang bervariasi.
+Menghitung akumulasi beban dinamis dengan menerapkan heuristik fisika momen lentur (beban di tengah jembatan lebih berat).
+Memantau dan mengurangi tingkat kesehatan struktur (fatigue) jembatan seiring berjalannya waktu.
+Memberikan peringatan dini dengan mengubah status jembatan (Normal, Waspada, Kritis) berdasarkan persentase beban.
+Mengoperasikan palang preventif otomatis (hysteresis) yang hanya terbuka jika beban turun drastis, serta fitur tutup permanen jika jembatan runtuh.
+Menampilkan visualisasi antarmuka CLI yang interaktif, berwarna, dan beranimasi tanpa kedipan layar.
